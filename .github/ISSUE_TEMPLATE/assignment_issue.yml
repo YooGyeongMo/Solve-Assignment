@@ -1,0 +1,71 @@
+name: 과제 이슈
+description: 새로운 과제 또는 개선사항을 위한 이슈
+title: "[과제] "
+labels: ["assignment"]
+body:
+  - type: dropdown
+    id: assignment-type
+    attributes:
+      label: 과제 유형
+      description: 어떤 종류의 과제인가요?
+      options:
+        - 코딩테스트
+        - 과제전형
+        - 알고리즘 문제
+        - 사이드 프로젝트
+        - 기타
+    validations:
+      required: true
+
+  - type: input
+    id: company
+    attributes:
+      label: 회사/출처
+      description: 과제를 제공한 회사 또는 문제 출처
+      placeholder: 예) 프로그래머스, 백준, ABC 회사
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 과제 설명
+      description: 과제의 요구사항을 간단히 설명해주세요
+      placeholder: |
+        - 구현해야 할 기능
+        - 제약 조건
+        - 평가 기준
+    validations:
+      required: true
+
+  - type: textarea
+    id: tech-stack
+    attributes:
+      label: 사용 기술 스택
+      description: 사용할 언어나 프레임워크
+      placeholder: |
+        예) Python, JavaScript, React, Spring Boot
+    validations:
+      required: false
+
+  - type: input
+    id: deadline
+    attributes:
+      label: 마감일
+      description: 과제 제출 기한 (있는 경우)
+      placeholder: YYYY-MM-DD
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 추가 메모
+      description: 기타 참고사항이나 체크리스트
+      placeholder: |
+        - [ ] 요구사항 분석
+        - [ ] 설계
+        - [ ] 구현
+        - [ ] 테스트
+    validations:
+      required: false
